@@ -1,4 +1,4 @@
-describe('MyTestCtrl', function() {
+describe('MyTestCtrl', function () {
 
   var $scope, controller;
   var $controller;
@@ -7,19 +7,18 @@ describe('MyTestCtrl', function() {
 
   describe("when there is no info", function () {
 
-    beforeEach(inject(function(_$controller_){
+    beforeEach(inject(function (_$controller_) {
       $controller = _$controller_;
     }));
 
-    beforeEach(function() {
+    beforeEach(function () {
       $scope = {};
-      controller = $controller('MyTestCtrl', { $scope: $scope });
+      controller = $controller('MyTestCtrl', {$scope: $scope});
     });
 
-    it("something should be an empty array", function () {
-      expect($scope.something).toBeDefined();
-      expect(angular.isArray($scope.something)).toBeTruthy();
-      expect($scope.something.length).toBe(0);
+    it('test variable is defined', function () {
+      expect($scope.test).toBeDefined();
     });
+
   });
 });
